@@ -3,7 +3,7 @@ package arrays.sorting.typesofsorting;
 import java.util.Arrays;
 
 public class BubbleSorting {
-    private int numberOfComparison;
+    private int numberOfComparisons;
     private int numberOfSwaps;
     private int[] arrayToSort;
 
@@ -22,7 +22,7 @@ public class BubbleSorting {
         for (int i = arrayToSortLength - 1; i > 0; i--) {
 
             for (int j = 0; j < i; j++) {
-                numberOfComparison++;
+                numberOfComparisons++;
                 if (arrayToSort[j] > arrayToSort[j + 1]) {
                     numberOfSwaps++;
                     int greaterElem = arrayToSort[j];
@@ -35,7 +35,7 @@ public class BubbleSorting {
 
     private void displayResults() {
         System.out.println();
-        System.out.println("Bubble arrays.sorting: number of comparison = " + numberOfComparison + "   number of swaps = " + numberOfSwaps);
+        System.out.println("Bubble arrays.sorting: number of comparisons = " + numberOfComparisons + "   number of swaps = " + numberOfSwaps);
         Arrays.stream(arrayToSort).forEach(element -> System.out.print(element + ", "));
         System.out.println();
         System.out.println();

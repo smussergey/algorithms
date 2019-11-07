@@ -3,7 +3,7 @@ package arrays.sorting.typesofsorting;
 import java.util.Arrays;
 
 public class InsertSorting {
-    private int numberOfComparison;
+    private int numberOfComparisons;
     private int numberOfSwaps;
     private int[] arrayToSort;
 
@@ -23,7 +23,7 @@ public class InsertSorting {
             int j = i;
 
             while (j > 0 && arrayToSort[j - 1] >= elemToInsert) {
-                numberOfComparison++;
+                numberOfComparisons++;
                 arrayToSort[j] = arrayToSort[j - 1];
                 --j;
             }
@@ -34,7 +34,7 @@ public class InsertSorting {
 
     private void displayResults() {
         System.out.println();
-        System.out.println("Insert arrays.sorting: number of comparison = " + numberOfComparison + "   number of swaps = " + numberOfSwaps);
+        System.out.println("Insert arrays.sorting: number of comparisons = " + numberOfComparisons + "   number of swaps = " + numberOfSwaps);
         Arrays.stream(arrayToSort).forEach(element -> System.out.print(element + ", "));
         System.out.println();
         System.out.println();

@@ -3,7 +3,7 @@ package arrays.sorting.typesofsorting;
 import java.util.Arrays;
 
 public class SelectSorting {
-    private int numberOfComparison;
+    private int numberOfComparisons;
     private int numberOfSwaps;
     private int[] arrayToSort;
 
@@ -23,7 +23,7 @@ public class SelectSorting {
             int indexOfMinElement = i;
 
             for (int j = i + 1; j < arrayToSortLength; j++) {
-                numberOfComparison++;
+                numberOfComparisons++;
                 if (arrayToSort[j] < arrayToSort[indexOfMinElement]) {
                     indexOfMinElement = j;
                 }
@@ -42,7 +42,7 @@ public class SelectSorting {
 
     private void displayResults() {
         System.out.println();
-        System.out.println("Select arrays.sorting: number of comparison = " + numberOfComparison + "   number of swaps = " + numberOfSwaps);
+        System.out.println("Select arrays.sorting: number of comparisons = " + numberOfComparisons + "   number of swaps = " + numberOfSwaps);
         Arrays.stream(arrayToSort).forEach(element -> System.out.print(element + ", "));
         System.out.println();
         System.out.println();
